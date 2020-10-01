@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Categories on Erasmo Neto</title>
+    <link>https://erasmo-aln.github.io/categories/</link>
+    <description>Recent content in Categories on Erasmo Neto</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Fri, 19 Jun 2020 23:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://erasmo-aln.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>ml</title>
+      <link>https://erasmo-aln.github.io/categories/ml/</link>
+      <pubDate>Fri, 19 Jun 2020 23:00:00 +0000</pubDate>
+      
+      <guid>https://erasmo-aln.github.io/categories/ml/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>dm</title>
+      <link>https://erasmo-aln.github.io/categories/dm/</link>
+      <pubDate>Mon, 19 Aug 2019 23:00:00 +0000</pubDate>
+      
+      <guid>https://erasmo-aln.github.io/categories/dm/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
