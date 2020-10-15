@@ -12,13 +12,22 @@
     
     
     <item>
+      <title>Customer Churn Analytics</title>
+      <link>https://erasmo-aln.github.io/portfolio/churn-analytics/</link>
+      <pubDate>Fri, 19 Jun 2020 23:00:00 +0000</pubDate>
+      
+      <guid>https://erasmo-aln.github.io/portfolio/churn-analytics/</guid>
+      <description>Customer Churn Analytics  Project Overview  The goal of this project is to understand why people are leaving (or have left) the company, and how to predict that behavior for other customers. Churn Analytics is very important, because when you understand the people&amp;rsquo;s behavior that leave your company, you can improve your service (or product) specifically to retain those customers, maximizing profit.
+The dataset used is the Telco-Customer-Churn.csv, from a telecommunications company that contains data of more than 7000 customers.</description>
+    </item>
+    
+    <item>
       <title>Traffic Signs Classifier</title>
       <link>https://erasmo-aln.github.io/portfolio/traffic-signs/</link>
       <pubDate>Fri, 19 Jun 2020 23:00:00 +0000</pubDate>
       
       <guid>https://erasmo-aln.github.io/portfolio/traffic-signs/</guid>
-      <description>Just testing&amp;hellip;
-Classificação de placas de trânsito com o uso de CNNs Este é o meu TCC do curso de Engenharia Elétrica, da Universidade Tiradentes. Como o título sugere, foi feita a classificação de diversas placas de trânsito usando CNNs (Convolutional Neural Networks).
+      <description>Classificação de placas de trânsito com o uso de CNNs Este é o meu TCC do curso de Engenharia Elétrica, da Universidade Tiradentes. Como o título sugere, foi feita a classificação de diversas placas de trânsito usando CNNs (Convolutional Neural Networks).
 Link para o TCC: Clique aqui
 Origem dos Dados Basicamente, há duas formas de fazer o download dos dados: diretamente do site do GTSRB, ou via Kaggle. Ambos terão os datasets de treino e teste separados.</description>
     </item>

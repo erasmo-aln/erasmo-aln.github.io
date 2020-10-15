@@ -1,0 +1,916 @@
+<!DOCTYPE html>
+<style>
+    html {
+        height: 100vh;
+    }
+    body {
+        min-height: 100vh;
+        display: grid;
+        grid-template-rows: 1fr auto;
+    }
+    .footer {
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
+</style>
+<html lang="en-gb"><head>
+  <meta charset="utf-8">
+  <title>Erasmo Neto</title>
+
+  <!-- mobile responsive meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta name="description" property="og:description" content="Churn Analytics of a telecommunications company">
+  <meta name="image" property="og:image" content="/">
+  <meta name="author" content="Erasmo Neto">
+  <meta name="generator" content="Hugo 0.74.2" />
+
+  <!-- plugins -->
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.2.6/dist/css/uikit.min.css ">
+  
+
+  <!-- Main Stylesheet -->
+  
+  <link rel="stylesheet" href="https://erasmo-aln.github.io/css/style.min.css" integrity="" media="screen">
+  
+  <link rel="stylesheet" href="https://erasmo-aln.github.io/css/syntax.min.css" integrity="" media="screen">
+
+  <!--Favicon-->
+  <link rel="apple-touch-icon" sizes="180x180" href="https://erasmo-aln.github.io/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://erasmo-aln.github.io/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://erasmo-aln.github.io/favicon-16x16.png">
+  <link rel="manifest" href="https://erasmo-aln.github.io/site.webmanifest">
+
+</head>
+<body class="portfolio">
+    <div class="wrapper"><div uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; bottom: #transparent-sticky-navbar">
+    <nav class="uk-navbar-container uk-margin" uk-navbar="mode: click;" style="padding-right: 3rem">
+        <div class="uk-navbar-right">
+            <ul class="uk-navbar-nav uk-visible@s">
+                
+                <li><a style="font-size: 18px; text-transform: none" href="https://erasmo-aln.github.io/"> Home
+                        </a></li>
+
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="https://erasmo-aln.github.io/about">About</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="https://erasmo-aln.github.io/blog">Blog</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li class="uk-active"><a style="font-size: 18px; text-transform:none"
+                        href="https://erasmo-aln.github.io/portfolio">Portfolio</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="https://erasmo-aln.github.io/contact">Contact</a></li>
+                
+                
+            </ul>
+
+            <a class="uk-navbar-toggle uk-hidden@s" uk-toggle="target: #sidenav" uk-navbar-toggle-icon href="#"></a>
+
+        </div>
+    </nav>
+</div>
+
+<div id="sidenav" uk-offcanvas="overlay: true">
+    <div class="uk-offcanvas-bar uk-flex uk-flex-column">
+
+        <ul class="uk-nav uk-nav-primary uk-nav-center uk-margin-auto-vertical">
+            
+            <li><a style="font-size: 18px" href="https://erasmo-aln.github.io/"> Home </a></li>
+
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="https://erasmo-aln.github.io/about">About</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="https://erasmo-aln.github.io/blog">Blog</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li class="uk-active"><a style="font-size: 18px" href="https://erasmo-aln.github.io/portfolio">Portfolio</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="https://erasmo-aln.github.io/contact">Contact</a></li>
+            
+            
+        </ul>
+
+    </div>
+</div>
+
+
+
+
+<style>
+  p {
+    margin: 0
+  }
+
+  .people-wrap {
+    display: inline-flex;
+    margin-top: 10px;
+  }
+
+  .people-image {
+    display: block;
+    border-radius: 50%;
+     
+  }
+
+  .people {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  .name {
+    margin: auto;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: #000;
+    font-family: Roboto, sans-serif;
+    line-height: 1.2;
+    margin-top: 2rem;
+  }
+
+  .content img {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom:30px;
+  }
+
+  p { margin-bottom: 1em; }
+
+  body p:last-child { margin-bottom: 0em; }
+
+  img.skills{
+    height: 80px;
+  }
+
+  @media only screen and (min-width: 960px) {
+    .content img{max-width:60vw; max-height:60vh}
+
+  .content img{
+      max-width:60vw;
+      max-height:60vh
+  }
+  }
+  .content{
+      width: 90vw;
+      max-width: 1200px
+  }
+
+  table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+
+</style>
+
+
+<section>
+  <div class="uk-container uk-margin-large-bottom uk-margin-medium-top">
+    <h1 class="uk-text-center uk-heading-medium">Customer Churn Analytics</h1>
+    <p class="uk-text-center uk-text-lead">Churn Analytics of a telecommunications company</p>
+    <p class="uk-text-center">Published on Jun 19, 2020</p>
+    <p class="uk-text-center">Reading time: 14 minutes.</p>
+    
+
+    <div class="uk-child-width-1-4@m uk-child-width-1-2@s uk-text-center uk-flex-center uk-grid-large uk-margin-small-top" uk-grid>
+      
+
+      <div>
+        
+        <a class="uk-button uk-button-default" href="https://github.com/erasmo-aln/customer-churn-analytics"> <span uk-icon="icon: github"></span>
+          Github</a>
+        
+      </div>
+    </div>
+    
+
+    <hr class="full-width">
+    
+    
+    <h2 class="uk-text-center uk-heading-small">Built with</h2>
+
+    <section >
+      <div class="uk-container">
+
+        <div class="uk-child-width-1-6@l uk-child-width-1-3@m uk-child-width-1-3@s uk-child-width-1-2 uk-text-center uk-flex-center"
+             uk-grid>
+          
+          <div class="imagemargin">
+            <a href="https://www.r-project.org/">
+            <img class="contain skills" src="https://res.cloudinary.com/dov7dvlys/image/upload/v1595346158/R_logo_lkwvmx.svg" alt="R" loading="lazy" style="cursor: pointer">
+            </a>
+          </div>
+          
+        </div>
+
+      </div>
+
+    </section>
+
+    <hr class="full-width">
+    
+    
+
+    <div class="content">
+      <h1 id="customer-churn-analytics-----omit-in-toc---">Customer Churn Analytics  <!-- raw HTML omitted --></h1>
+<h2 id="project-overview-----omit-in-toc---">Project Overview  <!-- raw HTML omitted --></h2>
+<p>The goal of this project is to understand why people are leaving (or have left) the company, and how to predict that behavior for other customers. Churn Analytics is very important, because when you understand the people&rsquo;s behavior that leave your company, you can improve your service (or product) specifically to retain those customers, maximizing profit.<br>
+The dataset used is the <a href="Telco-Customer-Churn.csv"><code>Telco-Customer-Churn.csv</code></a>, from a telecommunications company that contains data of more than 7000 customers.<br>
+Three models were used in the predictive modeling: Logistic Regression, Decision Tree and Random Forest. The resulting metrics are in the following table:</p>
+<table>
+<thead>
+<tr>
+<th align="center">Model</th>
+<th align="center">Accuracy</th>
+<th align="center">Precision</th>
+<th align="center">Recall</th>
+<th align="center">F1 Score</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">Logistic Regression</td>
+<td align="center">76.71%</td>
+<td align="center">54.38%</td>
+<td align="center">76.43%</td>
+<td align="center">63.55%</td>
+</tr>
+<tr>
+<td align="center">Decision Tree</td>
+<td align="center">76.14%</td>
+<td align="center">53.91%</td>
+<td align="center">70.18%</td>
+<td align="center">60.98%</td>
+</tr>
+<tr>
+<td align="center">Random Forest</td>
+<td align="center">77.23%</td>
+<td align="center">55.63%</td>
+<td align="center">70.54%</td>
+<td align="center">62.2%</td>
+</tr>
+</tbody>
+</table>
+<h2 id="table-of-contents-----omit-in-toc---">Table of Contents  <!-- raw HTML omitted --></h2>
+<ul>
+<li><a href="#understanding-the-data">Understanding the Data</a></li>
+<li><a href="#data-cleaning">Data Cleaning</a></li>
+<li><a href="#exploratory-data-analysis-eda">Exploratory Data Analysis (EDA)</a>
+<ul>
+<li><a href="#tenure-analysis">Tenure Analysis</a></li>
+<li><a href="#personal-analysis">Personal Analysis</a>
+<ul>
+<li><a href="#gender">Gender</a></li>
+<li><a href="#senior-citizen">Senior Citizen</a></li>
+<li><a href="#partner">Partner</a></li>
+<li><a href="#dependents">Dependents</a></li>
+</ul>
+</li>
+<li><a href="#phone-services-analysis">Phone Services Analysis</a>
+<ul>
+<li><a href="#phone-service-and-multiple-lines">Phone Service and Multiple Lines</a></li>
+</ul>
+</li>
+<li><a href="#internet-services">Internet Services</a>
+<ul>
+<li><a href="#online-security-to-streaming-movies">Online Security to Streaming Movies</a></li>
+</ul>
+</li>
+<li><a href="#payment-analysis">Payment Analysis</a>
+<ul>
+<li><a href="#contract">Contract</a></li>
+<li><a href="#paperless-billing">Paperless Billing</a></li>
+<li><a href="#payment-method">Payment Method</a></li>
+</ul>
+</li>
+<li><a href="#charges-analysis">Charges Analysis</a></li>
+<li><a href="#chi-squared-test">Chi-Squared Test</a></li>
+</ul>
+</li>
+<li><a href="#predictive-modeling">Predictive Modeling</a>
+<ul>
+<li><a href="#evaluation-metrics">Evaluation Metrics</a></li>
+<li><a href="#logistic-regression">Logistic Regression</a></li>
+<li><a href="#decision-tree">Decision Tree</a></li>
+<li><a href="#random-forest">Random Forest</a></li>
+<li><a href="#summary">Summary</a></li>
+</ul>
+</li>
+<li><a href="#conclusion">Conclusion</a></li>
+</ul>
+<h2 id="understanding-the-data">Understanding the Data</h2>
+<p>The dataset has 7043 rows and 23 columns. The column&rsquo;s description and their values are represented in the following table:</p>
+<table>
+<thead>
+<tr>
+<th>Column</th>
+<th align="center">Variable Type</th>
+<th>Description</th>
+<th align="center">Values</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CustomerId</td>
+<td align="center">Categorical/Nominal</td>
+<td>Unique identification of each customer</td>
+<td align="center">9999-XXXXX</td>
+</tr>
+<tr>
+<td>gender</td>
+<td align="center">Categorical/Binary</td>
+<td>the customer&rsquo;s gender</td>
+<td align="center">Male, Female</td>
+</tr>
+<tr>
+<td>SeniorCitizen</td>
+<td align="center">Categorical/Binary</td>
+<td>whether the customer is Senior or not</td>
+<td align="center">0, 1</td>
+</tr>
+<tr>
+<td>Partner</td>
+<td align="center">Categorical/Binary</td>
+<td>whether the customer has a partner or not</td>
+<td align="center">Yes, No</td>
+</tr>
+<tr>
+<td>Dependents</td>
+<td align="center">Categorical/Binary</td>
+<td>whether the customer has dependents or not</td>
+<td align="center">Yes, No</td>
+</tr>
+<tr>
+<td>tenure</td>
+<td align="center">Quantitative/Discrete</td>
+<td>the number of months the customer has in the company</td>
+<td align="center">0 to 72</td>
+</tr>
+<tr>
+<td>PhoneService</td>
+<td align="center">Categorical/Binary</td>
+<td>whether the customer has phone service or not</td>
+<td align="center">Yes, No</td>
+</tr>
+<tr>
+<td>MultipleLines</td>
+<td align="center">Categorical/Nominal</td>
+<td>whether the customer has multiple lines or not</td>
+<td align="center">Yes, No, No Phone Service</td>
+</tr>
+<tr>
+<td>InternetService</td>
+<td align="center">Categorical/Nominal</td>
+<td>the type of internet the customer has</td>
+<td align="center">DSL, Fiber optic, No</td>
+</tr>
+<tr>
+<td>OnlineSecurity, OnlineBackup, DeviceProtection, TechSupport, StreamingTV, StreamingMovies</td>
+<td align="center">Categorical/Nominal</td>
+<td>whether the customer has each service or not</td>
+<td align="center">Yes, No, No Internet Service</td>
+</tr>
+<tr>
+<td>Contract</td>
+<td align="center">Categorical/Nominal</td>
+<td>the type of contract</td>
+<td align="center">month-to-month, One year, Two year</td>
+</tr>
+<tr>
+<td>PaperlessBilling</td>
+<td align="center">Categorical/Binary</td>
+<td>whether the customer has paperless billing or not</td>
+<td align="center">Yes, No</td>
+</tr>
+<tr>
+<td>PaymentMethod</td>
+<td align="center">Categorical/Nominal</td>
+<td>the method of payment</td>
+<td align="center">Electronic check, Mailed check, Bank transfer (automatic), Credit card (automatic)</td>
+</tr>
+<tr>
+<td>MonthlyCharges</td>
+<td align="center">Quantitative/Continuous</td>
+<td>the monthly charges in dollars</td>
+<td align="center">18.25 to 118.75</td>
+</tr>
+<tr>
+<td>TotalCharges</td>
+<td align="center">Quantitative/Continuous</td>
+<td>the total charges since the customer entered in the company (in dollars)</td>
+<td align="center">18.8 to 8684.8</td>
+</tr>
+<tr>
+<td>Churn</td>
+<td align="center">Binary</td>
+<td>whether the customer left the company or not</td>
+<td align="center">Yes, No</td>
+</tr>
+</tbody>
+</table>
+<h2 id="data-cleaning">Data Cleaning</h2>
+<ul>
+<li>The dataset contains 11 NA values in the column <strong>TotalCharges</strong>. Considering that this is equivalent to <em>0.15%</em> of the total, these rows were removed, leaving 7032 remaining. <em>Obs: all 11 values ​​are from customers who are in the company for 0 months (new customers). We could keep those rows, but just 11 values won&rsquo;t be a problem, so we can delete them.</em></li>
+<li>The column <strong>CustomerId</strong> is only an identifier, so it can be excluded.</li>
+<li>All binary categorical variables are between <em>Yes/No</em>, so the <strong>SeniorCitizen</strong> was changed from <em>1/0</em> to <em>Yes/No</em> to keep the pattern.</li>
+</ul>
+<h2 id="exploratory-data-analysis-eda">Exploratory Data Analysis (EDA)</h2>
+<h3 id="tenure-analysis">Tenure Analysis</h3>
+<p>Before diving in each column, let&rsquo;s analyze the <strong>tenure</strong> column, that has quantitative values in it. The following image shows the proportion between the customer left the company or not for each value of tenure:
+<img src="images/churn_analytics/barplot_tenure.png" alt="barplot tenure">
+Clearly, the longer the customer&rsquo;s time in the company, the lower the churn rate (left the company). But what we can see from this image is that the difference from one month to the next is small (although the trend is very clear), so this column could be converted into a categorical variable separated by years in the company.<br>
+Another analysis that we can do on the <strong>tenure</strong> column is to show the range of people who left and stayed in the company. The next image shows that in a boxplot:
+<img src="images/churn_analytics/boxplot_tenure.png" alt="boxplot tenure">
+The boxplot shows us that 50% of customers left the company before or equal to 10 months (look the median on the blue box). The rest of them are distributed between 10 and 72, which is way more sparse. So, this is definitely a good problem to focus on.<br>
+As we saw before, maybe it&rsquo;s better to convert the <strong>tenure</strong> column into categorical variables. So, it&rsquo;ll be divided into 6 categories, which are:</p>
+<table>
+<thead>
+<tr>
+<th>Category</th>
+<th>Values</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>&lt;1 year</td>
+<td>1 to 11</td>
+</tr>
+<tr>
+<td>1-2 years</td>
+<td>12 to 23</td>
+</tr>
+<tr>
+<td>2-3 years</td>
+<td>24 to 35</td>
+</tr>
+<tr>
+<td>3-4 years</td>
+<td>36 to 47</td>
+</tr>
+<tr>
+<td>4-5 years</td>
+<td>48 to 59</td>
+</tr>
+<tr>
+<td>&gt;5 years</td>
+<td>60 to 72</td>
+</tr>
+</tbody>
+</table>
+<p>Now, let&rsquo;s analyze those categories instead discrete values:
+<img src="images/churn_analytics/barplot_tenure_categories.png" alt="tenure categories">
+We still can see the negative trend across the categories, but it is now clearer where the problem lies. It is evident that the first year of service has the highest churn rate (almost 50%).</p>
+<h3 id="personal-analysis">Personal Analysis</h3>
+<p>This section will focus on those columns related to customer&rsquo;s information, which are: <strong>gender</strong>, <strong>SeniorCitizen</strong>, <strong>Partner</strong> and <strong>Dependents</strong>.</p>
+<h4 id="gender">Gender</h4>
+<p>The column <strong>gender</strong> has 2 possible values: <em>Male</em> or <em>Female</em>. The image below shows the churn rate for each gender:
+<img src="images/churn_analytics/gender_churn.png" alt="gender churn">
+Apparently, there are no differences between the customer&rsquo;s gender. Let&rsquo;s analyze gender&rsquo;s churn rate grouped by tenure:
+<img src="images/churn_analytics/gender_tenure.png" alt="gender tenure">
+There are very few differences between them, concluding that <strong>gender</strong> is not a significant factor to determine if the customer will leave or not the company.</p>
+<h4 id="senior-citizen">Senior Citizen</h4>
+<p>The churn rate if the customer is Senior or not is represented in the image below:
+<img src="images/churn_analytics/senior_churn.png" alt="senior churn">
+Seeing that, we can see the difference between them, which indicates that this column could be useful to predict if the customer will leave or not. But this alone doesn&rsquo;t tell us too much, we need to analyze related to tenure too.
+<img src="images/churn_analytics/senior_tenure.png" alt="senior tenure">
+According to this image, the churn rate of senior customers in the first year is above 62%, followed by more than 50% in the second year, which is really bad. The company definitely should investigate this issue.</p>
+<h4 id="partner">Partner</h4>
+<p>Let&rsquo;s take a look in the <strong>Partner</strong> distribution:
+<img src="images/churn_analytics/partner_churn.png" alt="partner churn">
+We can see a difference there, saying that customers that don&rsquo;t have a partner tends to leave more than those who do. But we can&rsquo;t conclude that just because of this plot. Let&rsquo;s see that column grouped by tenure:
+<img src="images/churn_analytics/partner_tenure.png" alt="partner tenure">
+Apparently, both situations are equally distributed across tenure, what indicates differences in quantity. Maybe there are more customers that don&rsquo;t have a partner within first year of service. Plotting this:
+<img src="images/churn_analytics/partner_quantity.png" alt="partner quantity">
+Looking at this plot, we can see that in the first year, there are more customers without a partner, as we suspected. Therefore, this can add bias to our model in the predictive modeling because nothing but distribution indicates that having a partner or not affects the churn rate. Instead, this only supports the importance of <strong>tenure</strong> to churn.<br>
+<em>Obs: pay attention to the legend. The last plot is filled by Partner, not Churn.</em></p>
+<h4 id="dependents">Dependents</h4>
+<p>The distribution in the <strong>Dependents</strong> column is:
+<img src="images/churn_analytics/dep_churn.png" alt="dep churn">
+Again, customers that don&rsquo;t have dependents tend to leave more often. But this can be a difference in quantity again. Let&rsquo;s check it:
+<img src="images/churn_analytics/dep_quantity.png" alt="dep quantity">
+The same thing that happened with <strong>Partner</strong>&rsquo;s column, happens here: the 2 classes aren&rsquo;t well distributed throughout the tenure. The problem is that we know that <strong>tenure</strong> is significant to determine if the customer churn or not, so based on this difference in quantity on those 2 columns, this can lead to a error, when the model gives to much weight to these columns, when is the tenure that is affecting the churn.<br>
+In the predictive modeling step, we should keep an eye to these columns (<strong>Partner</strong> and <strong>Dependents</strong>) to see if we can improve accuracy deleting them.</p>
+<h3 id="phone-services-analysis">Phone Services Analysis</h3>
+<p>This section is about the columns <strong>PhoneService</strong> and <strong>MultipleLines</strong>.</p>
+<h4 id="phone-service-and-multiple-lines">Phone Service and Multiple Lines</h4>
+<p>The following table shows the distribution of the <strong>PhoneServices</strong> column:</p>
+<table>
+<thead>
+<tr>
+<th align="center">Have Phone Service?</th>
+<th align="center">Quantity</th>
+<th align="center">Percent</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">Yes</td>
+<td align="center">6352</td>
+<td align="center">90.33%</td>
+</tr>
+<tr>
+<td align="center">No</td>
+<td align="center">680</td>
+<td align="center">9.67%</td>
+</tr>
+</tbody>
+</table>
+<p>This column is highly unbalanced, but the churn rate for each value is basically equal, as we can see in the image below:
+<img src="images/churn_analytics/phone_churn.png" alt="phone churn">
+Let&rsquo;s check the <strong>MultipleLines</strong> distribution:
+<img src="images/churn_analytics/multiple.png" alt="multi churn">
+Basically, the same thing happened here, having or not these services don&rsquo;t affect that much in the churn rate. Again, those are 2 columns that could be excluded later.</p>
+<h3 id="internet-services">Internet Services</h3>
+<p>This section will analyze every Internet Services in the dataset, from <strong>OnlineSecurity</strong> to <strong>StreamingMovies</strong>. Starting with the presence or not of Internet Service, we have this distribution:
+<img src="images/churn_analytics/internet_tenure.png" alt="internet tenure">
+Clearly, we can see that the <em>fiber optic</em> service has a problem, given the highest churn rate in all categories. If that behavior had happened only in the first year, probably would be a quantity issue again. But it repeats all over tenure categories, therefore having fiber optic definitely impacts on the churn outcome.<br>
+Also, customers that don&rsquo;t have any internet services have the lowest churn rate. Now we need to verify that churn rate across all services related to internet.</p>
+<h4 id="online-security-to-streaming-movies">Online Security to Streaming Movies</h4>
+<p>The following plot shows the distribution of all these services:
+<img src="images/churn_analytics/iserv_churn.png" alt="internet services tenure">
+Again, we can see that customers that don&rsquo;t have internet service have the lowest churn rate, in contrast to those that have internet but don&rsquo;t have separated services. But we can&rsquo;t take conclusion yet, because this can be a higher quantity of customers within the first year that don&rsquo;t have these services yet. Let&rsquo;s check for it:
+<img src="images/churn_analytics/first_internet.png" alt="first internet">
+Indeed, all services have more customers within the first year, but that alone doesn&rsquo;t explain why customers that haven&rsquo;t these services tends to leave the company. The churn rate for this category (customers that don&rsquo;t have these services) is above 50% for every service. Apparently, customers that have these services or don&rsquo;t have internet at all tends to stay in the company. That could be a solution to this problem: the company could offer these services for a lower price for those customers, trying to retain them.<br>
+And for the fiber optic service, definitely the company should investigate that to improve it or fix any problems.</p>
+<h3 id="payment-analysis">Payment Analysis</h3>
+<p>This section will focus on payment methods and bill related variables, from <strong>Contract</strong> to <strong>PaymentMethod</strong>.</p>
+<h4 id="contract">Contract</h4>
+<p>There are 3 options of contracts: <em>month-to-month</em>, <em>one year</em> and <em>two year</em>. Let&rsquo;s see how it is distributed:
+<img src="images/churn_analytics/contract.png" alt="contract tenure">
+According to this plot, we can see that more the customer is in the company, he tends to sign <em>two year</em> contracts, and the churn rate are much lower. Also, a high quantity of customers in the first year tends to sign the monthly contract, what makes sense.<br>
+But this column looks more like a consequence than a cause to the churn problem. The dataset contains more newer customers and newer clients tends to leave more often, so the kind of contract it&rsquo;s just a consequence. One thing that supports that, it is the fast decrease on churn rate in the second year. But, just for precaution, it&rsquo;s not bad to investigate these customers and their services.</p>
+<h4 id="paperless-billing">Paperless Billing</h4>
+<p>There are a option to have paperless billing or not, plotting this distribution grouped by tenure:
+<img src="images/churn_analytics/paperless_tenure.png" alt="paperless tenure">
+According to this image, every tenure category has the same behavior: customers that have paperless billing tends to leave more often than those who haven&rsquo;t. So, definitely this is a variable we want to keep.</p>
+<h4 id="payment-method">Payment Method</h4>
+<p>There are 4 kinds of payment methods: <em>Bank transfer (automatic)</em>, <em>Credit card (automatic)</em>, <em>Electronic check</em> and <em>Mailed check</em>. They are evenly distributed, except for <em>electronic check</em> which has a little more customers. The image below shows the distribution filled by <strong>Churn</strong>:
+<img src="images/churn_analytics/paymentmethod.png" alt="payment method">
+Where <em>BT</em> are <em>Bank transfer</em>, <em>CC</em> is <em>Credit Card</em>, <em>EC</em> is <em>Electronic Check</em> and <em>MC</em> is <em>Mailed Check</em>. It is visible that customers that have <em>electronic check</em> as their payment method, also have the highest churn rate in every tenure category, which should be a significant factor to predict the <strong>Churn</strong>. The other methods are very similar, except for <em>Mailed Check</em> that has the lowest churn rate.</p>
+<h3 id="charges-analysis">Charges Analysis</h3>
+<p>This section will focus on the 2 numerical columns: <strong>MonthlyCharges</strong> and <strong>TotalCharges</strong>. The scatter plot below shows the relationship between the monthly charges and total charges:
+<img src="images/churn_analytics/charges.png" alt="charges">
+We can see different &lsquo;columns&rsquo; on that scatterplot showing some different service plans. Also, we can see a linear relationship between the variables, that is, when monthly charges increases, total charges also increases in a linear manner, the same occurs with time: increasing tenure time, also increases the total charges.<br>
+Therefore, if these 2 variables are related to each other, that makes no sense to keep them together. <strong>MonthlyCharges</strong> apparently represents better the customer&rsquo;s behavior, so <strong>TotalCharges</strong> will be deleted. The image below shows the distribution of monthly charges:
+<img src="images/churn_analytics/monthlycharges.png" alt="monthly charges">
+This histogram shows interesting behaviors. It&rsquo;s visible that the churn rate is high in every facet when the charges &lsquo;moves&rsquo; to the right (becomes more expensive). In the first year, this range is between 60 and 90, becoming between 90 and 110 after 5 years in the company. Maybe this is related to additional services, that we saw that could be causing this churn. Anyway, this is an specific range and should be investigated for sure.</p>
+<h3 id="chi-squared-test">Chi-Squared Test</h3>
+<p>Before building the models to predict the Churn, let&rsquo;s see the correlations between variables and the outcome using the chi-squared test. Basically, if the p-value is lower than 0.05, it means the variables are dependent (the other one being the churn). The following table shows all p-values:</p>
+<table>
+<thead>
+<tr>
+<th>Column</th>
+<th>p-value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>gender</td>
+<td><strong>4.904885e-01</strong></td>
+</tr>
+<tr>
+<td>SeniorCitizen</td>
+<td>2.479256e-36</td>
+</tr>
+<tr>
+<td>Partner</td>
+<td>3.973798e-36</td>
+</tr>
+<tr>
+<td>Dependents</td>
+<td>2.019659e-42</td>
+</tr>
+<tr>
+<td>tenure</td>
+<td>4.119229e-192</td>
+</tr>
+<tr>
+<td>PhoneService</td>
+<td><strong>3.499240e-01</strong></td>
+</tr>
+<tr>
+<td>MultipleLines</td>
+<td><strong>3.567927e-03</strong></td>
+</tr>
+<tr>
+<td>InternetService</td>
+<td>5.831199e-159</td>
+</tr>
+<tr>
+<td>OnlineSecurity</td>
+<td>1.400687e-184</td>
+</tr>
+<tr>
+<td>OnlineBackup</td>
+<td>7.776099e-131</td>
+</tr>
+<tr>
+<td>DeviceProtection</td>
+<td>1.959389e-121</td>
+</tr>
+<tr>
+<td>TechSupport</td>
+<td>7.407808e-180</td>
+</tr>
+<tr>
+<td>StreamingTV</td>
+<td>1.324641e-81</td>
+</tr>
+<tr>
+<td>StreamingMovies</td>
+<td>5.353560e-82</td>
+</tr>
+<tr>
+<td>Contract</td>
+<td>7.326182e-257</td>
+</tr>
+<tr>
+<td>PaperlessBilling</td>
+<td>8.236203e-58</td>
+</tr>
+<tr>
+<td>PaymentMethod</td>
+<td>1.426310e-139</td>
+</tr>
+</tbody>
+</table>
+<p>The bold values are the ones closer to the significance level (0.05). As we can see, the <strong>gender</strong>, <strong>PhoneService</strong> and <strong>MultipleLines</strong> are barely significant to the Churn. And other columns like <strong>Partner</strong> and <strong>Dependents</strong> that probably it&rsquo;s a tenure problem, shows a low p-value, which means they are relevant to Churn (looking purely to this test).</p>
+<h2 id="predictive-modeling">Predictive Modeling</h2>
+<p>Before diving in the models, we need to prepare the dataset. There are 3 things to do:</p>
+<ul>
+<li>Delete <strong>TotalCharges</strong> column;</li>
+<li>Convert <em>character</em> columns to <em>factor</em>;</li>
+<li>Change <strong>Churn</strong> values from <em>No</em> to 0 and <em>Yes</em> to 1;</li>
+<li>Split the dataset into <em>training</em> and <em>test</em> sets (70/30 split).</li>
+</ul>
+<p>After that, we&rsquo;ll take 2 paths: the first one is to use only the relevant columns according to the chi-squared test. The second path we&rsquo;ll use only relevant columns based on our previous analysis and compare the results.</p>
+<p>There will be used 3 different models: <em>Logistic Regression</em>, <em>Decision Tree</em> and <em>Random Forest</em>.</p>
+<h3 id="evaluation-metrics">Evaluation Metrics</h3>
+<p>To decide which evaluation metric we&rsquo;ll use, we need to understand the problem first. The company want to retain as many customers they can, increasing profit and customer&rsquo;s satisfaction, so we need to predict correctly customers that would leave, that way we can retain them. Basically we have 3 evaluation metrics that we can use: <strong>Accuracy</strong>, <strong>Precision</strong> and <strong>Recall</strong>.</p>
+<ul>
+<li>Accuracy in this context means that we are getting the predictions right, both for customers that would churn or not. Therefore, higher the accuracy, better for us.</li>
+<li>Precision means of all positive predictions, how many we got it right. A high precision in this case, could be converted in more satisfied customers, so we want to keep that high.</li>
+<li>Recall is about the actual customers that would leave. How many of them we predicted right, and how many we predicted that them wouldn&rsquo;t leave. So, definitely we need to keep recall high enough, because we don&rsquo;t want to predict positive customers as negatives.<br>
+And finally, there is the <strong>F1 Score</strong>, which is a combination of <strong>Precision</strong> and <strong>Recall</strong>, so instead of maximizing two separate scores, we can try to maximize only one depending on the case.</li>
+</ul>
+<h3 id="logistic-regression">Logistic Regression</h3>
+<p>For the first attempt, the columns <strong>gender</strong>, <strong>PhoneService</strong> and <strong>MultipleLines</strong> were excluded. Using a threshold of 0.5, the result was:</p>
+<table>
+<thead>
+<tr>
+<th align="center">Accuracy</th>
+<th align="center">Precision</th>
+<th align="center">Recall</th>
+<th align="center">F1 Score</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">80.88%</td>
+<td align="center">68.82%</td>
+<td align="center">51.25%</td>
+<td align="center">58.75%</td>
+</tr>
+</tbody>
+</table>
+<p>The dataset is highly unbalanced in respect to Churn, that way the model tends to classify the new observations as the majority class (in this case, churn as &lsquo;No&rsquo;). Moving the threshold to 0.3, we got:</p>
+<table>
+<thead>
+<tr>
+<th align="center">Accuracy</th>
+<th align="center">Precision</th>
+<th align="center">Recall</th>
+<th align="center">F1 Score</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">76.71%</td>
+<td align="center">54.38%</td>
+<td align="center">76.43%</td>
+<td align="center">63.55%</td>
+</tr>
+</tbody>
+</table>
+<p>The accuracy is still good, but the precision now is near 50%, which means that of all our positive predictions we hit it only half of them. In contrast the Recall was 76%, which is relatively good, because of all <em>positive</em> customers, we hit it almost 80% of them. There are 560 customers with positive Churn on the test set and this last model got it right for 428 of them. Maybe the company would low the charges, add some bonus services, directed marketing campaigns for these predicted customers, that way this low precision shouldn&rsquo;t hurt the company at all.</p>
+<h3 id="decision-tree">Decision Tree</h3>
+<p>Using the Decision Tree algorithm, we got the following results, both for a threshold of 0.5 and 0.3:</p>
+<table>
+<thead>
+<tr>
+<th align="center">Threshold</th>
+<th align="center">Accuracy</th>
+<th align="center">Precision</th>
+<th align="center">Recall</th>
+<th align="center">F1 Score</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">0.5</td>
+<td align="center">78.94%</td>
+<td align="center">64.08%</td>
+<td align="center">47.14%</td>
+<td align="center">54.32%</td>
+</tr>
+<tr>
+<td align="center">0.3</td>
+<td align="center">76.14%</td>
+<td align="center">53.91%</td>
+<td align="center">70.18%</td>
+<td align="center">60.98%</td>
+</tr>
+</tbody>
+</table>
+<p>Again, using a lower threshold gave us better results, considering that we want to maximize the <em>Recall</em>, as well as <em>F1 Score</em>. Only changing the threshold we increased the <em>Recall</em> by 23%, not affecting that much the <em>Precision</em> (near 10%) and also improving the <em>F1 Score</em> by 6%, which is good.</p>
+<h3 id="random-forest">Random Forest</h3>
+<p>The Random Forest algorithm gave us the following results:</p>
+<table>
+<thead>
+<tr>
+<th align="center">Threshold</th>
+<th align="center">Accuracy</th>
+<th align="center">Precision</th>
+<th align="center">Recall</th>
+<th align="center">F1 Score</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">0.5</td>
+<td align="center">79.41%</td>
+<td align="center">65.22%</td>
+<td align="center">48.21%</td>
+<td align="center">55.44%</td>
+</tr>
+<tr>
+<td align="center">0.3</td>
+<td align="center">77.23%</td>
+<td align="center">55.63%</td>
+<td align="center">70.54%</td>
+<td align="center">62.2%</td>
+</tr>
+</tbody>
+</table>
+<h3 id="summary">Summary</h3>
+<p>All the models performed better using a 0.3 threshold, as we&rsquo;re using the <em>Recall</em> and <em>F1 Score</em> as the main metrics. A summary showing the results of all 3 models are represented in the following table:</p>
+<table>
+<thead>
+<tr>
+<th align="center">Model</th>
+<th align="center">Accuracy</th>
+<th align="center">Precision</th>
+<th align="center">Recall</th>
+<th align="center">F1 Score</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">Logistic Regression</td>
+<td align="center">76.71%</td>
+<td align="center">54.38%</td>
+<td align="center">76.43%</td>
+<td align="center">63.55%</td>
+</tr>
+<tr>
+<td align="center">Decision Tree</td>
+<td align="center">76.14%</td>
+<td align="center">53.91%</td>
+<td align="center">70.18%</td>
+<td align="center">60.98%</td>
+</tr>
+<tr>
+<td align="center">Random Forest</td>
+<td align="center">77.23%</td>
+<td align="center">55.63%</td>
+<td align="center">70.54%</td>
+<td align="center">62.2%</td>
+</tr>
+</tbody>
+</table>
+<p>The three models got similar results, for every metric we used. But the <em>Logistic Regression</em> algorithm performed slightly better, as the <em>Recall</em> got higher than others, as well as the <em>F1 Score</em>.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>The <em>Logistics Regression</em> algorithm performed better than others, therefore should be used in this case. For a company that never have did <em>Churn Analytics</em>, a model that predict with a <em>Recall</em> above 75% is quite good. From 100 customers that would leave the company, imagine that the company retained 75 of them, this is extremely relevant for the company, as well for its profits.<br>
+Every company should be doing Data Science, <em>Churn Analytics</em> it&rsquo;s only a piece from an universe of possibilites to help the company and theirs customers, and this project showed exactly that.</p>
+
+    </div>
+  </div>
+  </div>
+</section>
+
+
+
+    </div>
+<footer class="footer">
+  <div class="uk-container">
+
+
+    <div class="uk-grid-small uk-child-width-1-4@m uk-text-center uk-flex-center uk-margin-medium-bottom" uk-grid>
+      <div class="uk-margin-small-bottom">
+        <h5 class="uk-margin-small-bottom">Email</h5>
+        <a href="mailto:erasmo.aln@gmail.com">erasmo.aln@gmail.com</a>
+
+      </div>
+      <div>
+        <h5 class="uk-margin-small-bottom">Location</h5>
+                  <div uk-lightbox>
+                    <a href="" data-caption="Sergipe, BR"
+                      data-type="iframe">Sergipe, BR</a>
+      </div>
+      </div>
+
+    </div>
+
+
+
+
+
+  
+</footer>
+
+
+<!-- JS Plugins -->
+
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.2.6/dist/js/uikit.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.2.6/dist/js/uikit-icons.min.js"></script>
+
+</body>
+</html>

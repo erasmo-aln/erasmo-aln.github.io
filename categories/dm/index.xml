@@ -6,10 +6,20 @@
     <description>Recent content in dm on Erasmo Neto</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
-    <lastBuildDate>Mon, 19 Aug 2019 23:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 19 Jun 2020 23:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://erasmo-aln.github.io/categories/dm/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Customer Churn Analytics</title>
+      <link>https://erasmo-aln.github.io/portfolio/churn-analytics/</link>
+      <pubDate>Fri, 19 Jun 2020 23:00:00 +0000</pubDate>
+      
+      <guid>https://erasmo-aln.github.io/portfolio/churn-analytics/</guid>
+      <description>Customer Churn Analytics  Project Overview  The goal of this project is to understand why people are leaving (or have left) the company, and how to predict that behavior for other customers. Churn Analytics is very important, because when you understand the people&amp;rsquo;s behavior that leave your company, you can improve your service (or product) specifically to retain those customers, maximizing profit.
+The dataset used is the Telco-Customer-Churn.csv, from a telecommunications company that contains data of more than 7000 customers.</description>
+    </item>
     
     <item>
       <title>Chasers of the Lost Data</title>

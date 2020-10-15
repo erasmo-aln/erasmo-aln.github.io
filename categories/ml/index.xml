@@ -17,8 +17,7 @@
       <pubDate>Fri, 19 Jun 2020 23:00:00 +0000</pubDate>
       
       <guid>https://erasmo-aln.github.io/portfolio/traffic-signs/</guid>
-      <description>Just testing&amp;hellip;
-Classificação de placas de trânsito com o uso de CNNs Este é o meu TCC do curso de Engenharia Elétrica, da Universidade Tiradentes. Como o título sugere, foi feita a classificação de diversas placas de trânsito usando CNNs (Convolutional Neural Networks).
+      <description>Classificação de placas de trânsito com o uso de CNNs Este é o meu TCC do curso de Engenharia Elétrica, da Universidade Tiradentes. Como o título sugere, foi feita a classificação de diversas placas de trânsito usando CNNs (Convolutional Neural Networks).
 Link para o TCC: Clique aqui
 Origem dos Dados Basicamente, há duas formas de fazer o download dos dados: diretamente do site do GTSRB, ou via Kaggle. Ambos terão os datasets de treino e teste separados.</description>
     </item>
