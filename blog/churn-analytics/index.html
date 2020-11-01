@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<style>
+    html {
+        height: 100vh;
+    }
+    body {
+        min-height: 100vh;
+        display: grid;
+        grid-template-rows: 1fr auto;
+    }
+    .footer {
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
+</style>
+<html lang="en-gb"><head>
+  <meta charset="utf-8">
+  <title>Erasmo Neto</title>
+
+  <!-- mobile responsive meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta name="description" property="og:description" content="O que é exatamente Churn Analytics, e como isso pode ajudar a sua empresa?">
+  <meta name="image" property="og:image" content="/">
+  <meta name="author" content="Erasmo Neto">
+  <meta name="generator" content="Hugo 0.74.2" />
+
+  <!-- plugins -->
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.2.6/dist/css/uikit.min.css ">
+  
+
+  <!-- Main Stylesheet -->
+  
+  <link rel="stylesheet" href="https://erasmo-aln.github.io/css/style.min.css" integrity="" media="screen">
+  
+  <link rel="stylesheet" href="https://erasmo-aln.github.io/css/syntax.min.css" integrity="" media="screen">
+
+  <!--Favicon-->
+  <link rel="apple-touch-icon" sizes="180x180" href="https://erasmo-aln.github.io/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://erasmo-aln.github.io/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://erasmo-aln.github.io/favicon-16x16.png">
+  <link rel="manifest" href="https://erasmo-aln.github.io/site.webmanifest">
+
+</head>
+<body class="blog">
+    <div class="wrapper"><div uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; bottom: #transparent-sticky-navbar">
+    <nav class="uk-navbar-container uk-margin" uk-navbar="mode: click;" style="padding-right: 3rem">
+        <div class="uk-navbar-right">
+            <ul class="uk-navbar-nav uk-visible@s">
+                
+                <li><a style="font-size: 18px; text-transform: none" href="https://erasmo-aln.github.io/"> Home
+                        </a></li>
+
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="https://erasmo-aln.github.io/about">About</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li class="uk-active"><a style="font-size: 18px; text-transform:none"
+                        href="https://erasmo-aln.github.io/blog">Blog</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="https://erasmo-aln.github.io/portfolio">Portfolio</a></li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <li><a style="font-size: 18px; text-transform: none" href="https://erasmo-aln.github.io/contact">Contact</a></li>
+                
+                
+            </ul>
+
+            <a class="uk-navbar-toggle uk-hidden@s" uk-toggle="target: #sidenav" uk-navbar-toggle-icon href="#"></a>
+
+        </div>
+    </nav>
+</div>
+
+<div id="sidenav" uk-offcanvas="overlay: true">
+    <div class="uk-offcanvas-bar uk-flex uk-flex-column">
+
+        <ul class="uk-nav uk-nav-primary uk-nav-center uk-margin-auto-vertical">
+            
+            <li><a style="font-size: 18px" href="https://erasmo-aln.github.io/"> Home </a></li>
+
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="https://erasmo-aln.github.io/about">About</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li class="uk-active"><a style="font-size: 18px" href="https://erasmo-aln.github.io/blog">Blog</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="https://erasmo-aln.github.io/portfolio">Portfolio</a></li>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <li><a style="font-size: 18px" href="https://erasmo-aln.github.io/contact">Contact</a></li>
+            
+            
+        </ul>
+
+    </div>
+</div>
+
+
+
+
+<style>
+  p {
+    margin: 0
+  }
+
+  .people-wrap {
+    display: inline-flex;
+    margin-top: 10px;
+  }
+
+  .people-image {
+    display: block;
+    border-radius: 50%;
+     
+  }
+
+  .people {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  .name {
+    margin: auto;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: #000;
+    font-family: Roboto, sans-serif;
+    line-height: 1.2;
+    margin-top: 2rem;
+  }
+
+  .content img {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom:30px;
+  }
+
+  p { margin-bottom: 1em; }
+
+  body p:last-child { margin-bottom: 0em; }
+
+  img.skills{
+    height: 80px;
+  }
+
+  @media only screen and (min-width: 960px) {
+    .content img{max-width:60vw; max-height:60vh}
+
+  .content img{
+      max-width:60vw;
+      max-height:60vh
+  }
+  }
+  .content{
+      width: 90vw;
+      max-width: 1200px
+  }
+
+  table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+
+</style>
+
+
+<section>
+  <div class="uk-container uk-margin-large-bottom uk-margin-medium-top">
+    <h1 class="uk-text-center uk-heading-medium">O que é Churn Analytics?</h1>
+    <p class="uk-text-center uk-text-lead">O que é exatamente Churn Analytics, e como isso pode ajudar a sua empresa?</p>
+    <p class="uk-text-center">Published on Oct 16, 2020</p>
+    <p class="uk-text-center">Reading time: 9 minutes.</p>
+    
+
+    <hr class="full-width">
+    
+
+    <div class="content">
+      <h2 id="o-que-é-churn">O que é <em>Churn</em>?</h2>
+<p><img src="https://erasmo-aln.github.io/images/blog/churn/churn1.jpg" alt="balde"></p>
+<p>Antes de conversarmos sobre <em>Churn Analytics</em>, primeiro devemos saber o que significa <em>Churn</em>. Toda empresa precisa ter clientes, sejam para adquirirem seus produtos, ou serviços. Usando a imagem acima como analogia, a água enchendo o balde se refere aos clientes novos, já os vazamentos são aqueles clientes que deixam a empresa. O <em>Churn</em> se refere a taxa de clientes que estão saindo, ou seja, a taxa de rotatividade; quanto menor esta taxa, mais clientes tendem a permanecer com a empresa (o que é bom).</p>
+<h2 id="a-importância-do-churn-analytics">A importância do <em>Churn Analytics</em></h2>
+<p>Daí então surge a importância do <em>Churn Analytics</em>, que é justamente analisar o porquê destes clientes estarem deixando a empresa, além de propor soluções para este problema. Apesar de parecer um problema relativamente simples, há uma infinidade de fatores envolvidos.</p>
+<p>Uma empresa tende a gastar <a href="https://www.huffpost.com/entry/50-important-customer-exp_b_8295772">6 a 7 vezes mais</a> para atrair novos clientes do que reter os já existentes. Considerando que uma parcela significativa da receita pode estar sendo afetada pelo <em>churn</em>, nada adianta ter mais gastos para atrair novos clientes, sendo que estes tem uma alta chance de cancelar o serviço nos próximos meses.</p>
+<h2 id="tipos-de-churn">Tipos de <em>Churn</em></h2>
+<p>Existem vários tipos diferentes de <em>churn</em>, aqui iremos falar sobre 3 deles: <em>subscription</em>, <em>non-subscription</em> e o <em>involuntary</em>.</p>
+<h3 id="subscription-churn"><em>Subscription Churn</em></h3>
+<p>Este tipo de <em>churn</em> ocorre quando a empresa oferece algum serviço contratual, como por exemplo serviços de internet e <em>streaming</em>. Então o cliente normalmente liga para a empresa com o objetivo de cancelar o serviço. Muitas empresas têm profissionais que buscam reter estes clientes, mas apenas quando este já decidiu cancelar, o que acaba não sendo tão eficiente, pois a confiança do cliente já foi quebrada.</p>
+<h3 id="non-subscription-churn"><em>Non-Subscription Churn</em></h3>
+<p>Como o nome já sugere, aqui não há um contrato, então é um pouco mais sutil de analisar este tipo de <em>churn</em>. Este tipo de <em>churn</em> está presente por exemplo em sites de notícias, onde essa taxa é medida pela frequência do cliente, ou até mesmo em sites de compras, onde o cliente acaba montando um carrinho virtual mas não realiza a compra. Diversos fatores podem estar envolvidos, como: experiência do usuário, serviço/produto ruim, preços elevados, entre outros.</p>
+<h3 id="involuntary-churn"><em>Involuntary Churn</em></h3>
+<p>Já este último, ocorre não por insatisfação do cliente, mas por outras causas como: limite do cartão insuficiente naquele mês, cartão expirado, falta de atualização dos métodos de pagamento etc. Neste caso, o cliente que não cancelaria o serviço de forma voluntária ao passar por esta situação acaba saindo da empresa de forma voluntária. Uma das maiores causas de <em>churn</em> involuntário são cartões de crédito expirados. Estes possuem geralmente 3 anos de validade, então é essencial que de tempos em tempos seja preciso que este cliente atualize os dados de pagamento para evitar este problema.</p>
+<h2 id="possíveis-soluções">Possíveis Soluções</h2>
+<p>Cada empresa é única e não existe uma solução geral para todas, por isso é importantíssimo entender o tipo de cliente que sua empresa possui. Porém, uma medida muito comum usada para solucionar este problema é aplicar testes A/B, como por exemplo:</p>
+<ul>
+<li>Aplicar descontos direcionados a clientes específicos;</li>
+<li>Aumentar o suporte dados aos clientes que possuem mais chance de deixar a empresa;</li>
+<li>Alterar algumas <em>features</em> no seu site/app, como por exemplo eliminar passos adicionais na fase de compra ou adicionar notificações personalizadas.</li>
+</ul>
+<h2 id="exemplo-de-churn-analytics">Exemplo de <em>Churn Analytics</em></h2>
+<p>Realizei um projeto de <em>Churn Analytics</em>, que você pode ver em detalhes o passo a passo <a href="https://erasmo-aln.github.io/portfolio/churn-analytics/">aqui</a>. Porém, a intenção deste blog é ser breve, então aqui não será tão detalhado.</p>
+<p>O primeiro passo sempre será compreender o problema de negócios, neste caso a empresa pretende realizar previsões sobre futuros clientes, com o objetivo de saber se eles têm risco de sair ou não. Após coletar e limpar os dados necessários, é feita a análise exploratória, ou seja, onde você irá explorar os dados para entender o que está influenciando no <em>churn</em>.</p>
+<p>Feita a análise exploratória, cheguei em algumas conclusões que podem estar afetando o <em>churn</em>:</p>
+<ul>
+<li>Clientes recentes (nos primeiros meses) tem uma alta taxa de cancelamento;</li>
+<li>Clientes Sêniores (o conjunto de dados não possui essa definição, porém iremos considerar como idosos, ou seja, acima de 60 anos), recentes ou antigos, possuem uma taxa de cancelamento maior do que os clientes jovens;</li>
+<li>Clientes que possuem fibra ótica, possuem alta taxa de cancelamento em comparação aos que tem DSL, ou aos que não tem internet;</li>
+<li>Clientes que possuem internet, mas não possuem serviços adicionais como suporte técnico, segurança online, e serviços de <em>streaming</em>, possuem alta taxa de cancelamento em comparação aos que têm;</li>
+<li>Clientes que realizam o pagamento com cheque eletrônico, possuem uma taxa muito maior de cancelamento do que os outros;</li>
+</ul>
+<p>É importante ressaltar que apesar de a correlação entre alguns fatores ser alta, não significa que este é a causa do <em>churn</em>, correlação não implica causalidade. Porém, criando hipóteses que podem ser as causas destes problemas:</p>
+<ul>
+<li>Será que a experiência do usuário é boa? Pode ser um fator que leve pessoas mais idosas a ficarem insatisfeitas com o serviço, por não saber usar corretamente. Talvez obter <em>feedbacks</em> destes clientes, ou realizar testes A/B ajude a solucionar este problema;</li>
+<li>O serviço de fibra ótica está com problema? Por se tratar de uma tecnologia mais moderna, deveria ter mais clientes satisfeitos do que o contrário. Inclusive cerca de 85% do <em>churn</em> resulta de serviços ruins que poderiam ter sido evitados;</li>
+<li>A empresa tem condições de oferecer serviços adicionais com um preço mais baixo? Ou incentivar a aquisição de serviços opcionais aos seus clientes. Cerca de 86% dos clientes tendem a pagar mais para obter uma experiência melhor;</li>
+<li>Será que o serviço de cheque eletrônico está com problema? Ou será que é um caso de <em>churn</em> involuntário?</li>
+<li>E por último, definitivamente o fator mais importante é o tempo de permanência na empresa. Criar campanhas de marketing para novos clientes, ou preços especiais, talvez incentivos a assinar contratos de 1 ano ao invés de mensal, as possibilidades são muitas, mas com certeza algo deve ser feito em respeito a clientes novos, pois é a maior fonte de <em>churn</em> desta empresa.</li>
+</ul>
+<p>E então? Percebeu a importância do <em>Churn Analytics</em> para sua empresa? O propósito aqui foi descrever brevemente, pois este assunto é muito extenso, mas espero ter sido claro.<br>
+Aceito qualquer <em>feedback</em>, críticas, sugestões e elogios. Através do <a href="https://www.linkedin.com/in/erasmoneto/">LinkedIn</a> é a melhor forma de entrar em contato comigo.</p>
+<p>Links Úteis e Fontes:<br>
+<a href="https://towardsdatascience.com/customer-churn-analysis-4f77cc70b3bd">https://towardsdatascience.com/customer-churn-analysis-4f77cc70b3bd</a><br>
+<a href="https://mixpanel.com/topics/churn-analytics/">https://mixpanel.com/topics/churn-analytics/</a><br>
+<a href="https://mixpanel.com/blog/understanding-churn/">https://mixpanel.com/blog/understanding-churn/</a><br>
+<a href="https://www.huffpost.com/entry/50-important-customer-exp_b_8295772">https://www.huffpost.com/entry/50-important-customer-exp_b_8295772</a><br>
+<a href="https://mixpanel.com/topics/how-to-improve-lifetime-value/">https://mixpanel.com/topics/how-to-improve-lifetime-value/</a><br>
+<a href="https://www.profitwell.com/recur/all/churn-analysis">https://www.profitwell.com/recur/all/churn-analysis</a><br>
+<a href="https://www.profitwell.com/recur/all/involuntary-delinquent-churn-failed-payments-recovery">https://www.profitwell.com/recur/all/involuntary-delinquent-churn-failed-payments-recovery</a><br>
+<a href="https://learn.profitwell.com/article/PI7X2bu6i8-understanding-delinquent-churn?code=400&amp;failed=1&amp;reason=Multilingual+is+not+enabled+on+this+account">https://learn.profitwell.com/article/PI7X2bu6i8-understanding-delinquent-churn?code=400&amp;failed=1&amp;reason=Multilingual+is+not+enabled+on+this+account</a></p>
+
+    </div>
+  </div>
+  </div>
+</section>
+
+
+
+    </div>
+<footer class="footer">
+  <div class="uk-container">
+
+
+    <div class="uk-grid-small uk-child-width-1-4@m uk-text-center uk-flex-center uk-margin-medium-bottom" uk-grid>
+      <div class="uk-margin-small-bottom">
+        <h5 class="uk-margin-small-bottom">Email</h5>
+        <a href="mailto:erasmo.aln@gmail.com">erasmo.aln@gmail.com</a>
+
+      </div>
+      <div>
+        <h5 class="uk-margin-small-bottom">Location</h5>
+                  <div uk-lightbox>
+                    <a href="" data-caption="Sergipe, BR"
+                      data-type="iframe">Sergipe, BR</a>
+      </div>
+      </div>
+
+    </div>
+
+
+
+
+
+  
+</footer>
+
+
+<!-- JS Plugins -->
+
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.2.6/dist/js/uikit.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.2.6/dist/js/uikit-icons.min.js"></script>
+
+</body>
+</html>

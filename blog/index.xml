@@ -12,13 +12,12 @@
     
     
     <item>
-      <title>What is Churn Analytics?</title>
-      <link>https://erasmo-aln.github.io/blog/hello/</link>
+      <title>O que é Churn Analytics?</title>
+      <link>https://erasmo-aln.github.io/blog/churn-analytics/</link>
       <pubDate>Fri, 16 Oct 2020 10:30:34 +0000</pubDate>
       
-      <guid>https://erasmo-aln.github.io/blog/hello/</guid>
-      <description>https://erasmo-aln.github.io/images/blog/churn
-O que é Churn? Antes de conversarmos sobre Churn Analytics, primeiro devemos saber o que significa Churn. Toda empresa precisa ter clientes, sejam para adquirirem seus produtos ou serviços. Há então um fluxo de clientes novos, porém, também há um fluxo de clientes deixando esta empresa. O Churn se refere a taxa de clientes que estão deixando a empresa, ou seja, a taxa de rotatividade; quanto menor esta taxa, mais clientes tendem a permanecer com a empresa (o que é bom).</description>
+      <guid>https://erasmo-aln.github.io/blog/churn-analytics/</guid>
+      <description>O que é Churn? Antes de conversarmos sobre Churn Analytics, primeiro devemos saber o que significa Churn. Toda empresa precisa ter clientes, sejam para adquirirem seus produtos, ou serviços. Usando a imagem acima como analogia, a água enchendo o balde se refere aos clientes novos, já os vazamentos são aqueles clientes que deixam a empresa. O Churn se refere a taxa de clientes que estão saindo, ou seja, a taxa de rotatividade; quanto menor esta taxa, mais clientes tendem a permanecer com a empresa (o que é bom).</description>
     </item>
     
   </channel>
